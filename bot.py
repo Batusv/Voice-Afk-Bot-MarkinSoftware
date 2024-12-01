@@ -1,14 +1,9 @@
 import discord
 import config  # config.py dosyasını içe aktarıyoruz
-from discord.ext import commands
-from dotenv import load_dotenv
 import os
 
-# .env dosyasını yükle
-load_dotenv()
-
-# Tokeni çevresel değişkenden al
-bottoken = os.getenv("BOT_TOKEN")
+# Token'ı config.py dosyasından al
+bottoken = config.BOT_TOKEN
 
 intents = discord.Intents.default()
 intents.messages = True
